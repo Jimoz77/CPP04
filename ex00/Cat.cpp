@@ -1,7 +1,7 @@
 #include "Cat.hpp"
 
 
-Cat::Cat(/* args */)
+Cat::Cat()
 {
     this->type = "Cat";
     std::cout << "🐱 A little kitten has been adopted\n";

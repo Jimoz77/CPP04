@@ -1,5 +1,5 @@
-#ifndef __ANIMAL_H__
-#define __ANIMAL_H__
+#ifndef ANIMAL_H
+#define ANIMAL_H
 
 #include <iostream>
 #include <string>

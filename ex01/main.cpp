@@ -119,8 +119,5 @@ int main()
     std::cout << "║  Vérifie avec valgrind pour les leaks !   ║\n";
     std::cout << "╚════════════════════════════════════════════╝\n";
     
-    // Pour vérifier les fuites mémoire:
-    // valgrind --leak-check=full ./program
-    
     return 0;
 }

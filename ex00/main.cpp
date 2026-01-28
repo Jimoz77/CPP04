@@ -35,7 +35,7 @@ int main()
         std::cout << "wrongCat type: " << wrongCat->getType() << std::endl;
         
         std::cout << "\n--- Sound (liaison statique) ---" << std::endl;
-        wrongCat->makeSound(); // Appellera WrongAnimal::makeSound() !
+        wrongCat->makeSound(); // Appellera WrongAnimal::makeSound()
         
         std::cout << "\n--- Destruction ---" << std::endl;
         delete meta;

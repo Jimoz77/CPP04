@@ -1,8 +1,5 @@
 #include "Dog.hpp"
 
-
-
-
 Dog::Dog()
 {
     this->type = "Dog";
@@ -16,7 +13,6 @@ Dog::Dog(const Dog& other) : Animal(other)
     this->brain = new Brain(*other.brain);
     std::cout << "🐕A twin doggo has been adopted\n";
 }
-
 
 void Dog::makeSound() const
 {
