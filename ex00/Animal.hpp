@@ -10,7 +10,7 @@ class Animal
 protected:
     std::string type;
 public:
-    Animal(/* args */);
+    Animal();
     Animal(const Animal& other);
     Animal& operator=(const Animal& other);
     std::string getType() const;

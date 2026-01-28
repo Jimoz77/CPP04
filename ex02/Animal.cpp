@@ -1,6 +1,6 @@
 #include "Animal.hpp"
 
-Animal::Animal(/* args */)
+Animal::Animal()
 {
     std::cout << "[ANIMAL CREATED]\n";
     this->type = "Weird creature";

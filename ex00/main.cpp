@@ -1,5 +1,6 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongCat.hpp"
 
 
 int main()
@@ -25,7 +26,7 @@ int main()
         delete i;
     }
 
-   /*  std::cout << "\n\n=== TEST 2: Polymorphisme INCORRECT (sans virtual) ===" << std::endl;
+    std::cout << "\n\n=== TEST 2: Polymorphisme INCORRECT (sans virtual) ===" << std::endl;
     {
         const WrongAnimal* meta = new WrongAnimal();
         const WrongAnimal* wrongCat = new WrongCat();
@@ -35,35 +36,33 @@ int main()
         
         std::cout << "\n--- Sound (liaison statique) ---" << std::endl;
         wrongCat->makeSound(); // Appellera WrongAnimal::makeSound() !
-        // Pas WrongCat::makeSound() car pas de virtual
         
         std::cout << "\n--- Destruction ---" << std::endl;
         delete meta;
         delete wrongCat;
-    } */
+    }
 
-/*     std::cout << "\n\n=== TEST 3: Appel direct (pas via pointeur) ===" << std::endl;
+    std::cout << "\n\n=== TEST 3: Appel direct (pas via pointeur) ===" << std::endl;
     {
         WrongCat directWrongCat;
         std::cout << "\n--- Sound (appel direct) ---" << std::endl;
-        directWrongCat.makeSound(); // Ici ça appellera WrongCat::makeSound()
-        // car on appelle directement sur l'objet, pas via un pointeur
-    } */
+        directWrongCat.makeSound(); //appellera WrongCat::makeSound()
+    }
 
     std::cout << "\n\n=== TEST 4: Constructeurs de copie ===" << std::endl;
     {
         Dog dog1;
-        Dog dog2(dog1); // Constructeur de copie
+        Dog dog2(dog1);
         
         Cat cat1;
-        Cat cat2 = cat1; // Constructeur de copie aussi
+        Cat cat2 = cat1;
     }
 
     std::cout << "\n\n=== TEST 5: Opérateurs d'assignation ===" << std::endl;
     {
         Dog dog1;
         Dog dog2;
-        dog2 = dog1; // Opérateur d'assignation
+        dog2 = dog1;
     }
 
     return 0;

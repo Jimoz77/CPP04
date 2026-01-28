@@ -6,9 +6,9 @@
 class Dog : public Animal
 {
 private:
-    /* data */
+
 public:
-    Dog(/* args */);
+    Dog();
     Dog(const Dog& other);
     Dog& operator=(const Dog& other);
     void makeSound() const;

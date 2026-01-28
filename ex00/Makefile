@@ -3,8 +3,8 @@ NAME = result
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-HEADERS = Animal.hpp Dog.hpp Cat.hpp
-SRCS = Animal.cpp main.cpp Cat.cpp Dog.cpp
+HEADERS = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
+SRCS = Animal.cpp main.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

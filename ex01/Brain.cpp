@@ -20,6 +20,17 @@ Brain& Brain::operator=(const Brain& other)
     }
     return (*this);
 }
+const std::string& Brain::getIdea(int index) const
+{
+    if (index >= 0 && index < 100)
+        return ideas[index];
+    return ideas[0];
+}
+void Brain::setIdea(int index, const std::string& idea)
+{
+    if (index >= 0 && index < 100)
+        ideas[index] = idea;
+}
 Brain::~Brain()
 {
 

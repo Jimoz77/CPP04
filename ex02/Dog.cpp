@@ -3,7 +3,7 @@
 
 
 
-Dog::Dog(/* args */)
+Dog::Dog()
 {
     this->type = "Dog";
     this->brain = new Brain();

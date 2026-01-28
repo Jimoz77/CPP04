@@ -3,7 +3,7 @@
 
 
 
-Dog::Dog(/* args */)
+Dog::Dog()
 {
     this->type = "Dog";
     this->brain = new Brain();
@@ -32,6 +32,16 @@ Dog& Dog::operator=(const Dog& other)
         *this->brain = *other.brain;
     }
     return (*this);
+}
+
+const std::string& Dog::getIdea(int index) const
+{
+    return this->brain->getIdea(index);
+}
+
+void Dog::setIdea(int index, const std::string& idea)
+{
+    this->brain->setIdea(index, idea);
 }
 
 Dog::~Dog()

@@ -1,5 +1,0 @@
-[31m[git][0m
-[32m	gsb = [0m[33mgit status[0m[32m --short --branch[0m
-[32m	gss = [0m[33mgit status[0m[32m --short[0m
-[32m	gst = [0m[33mgit status[0m[32m[0m
-

@@ -2,7 +2,7 @@
 
 
 
-Cat::Cat(/* args */)
+Cat::Cat()
 {
     this->type = "Cat";
     this->brain = new Brain();

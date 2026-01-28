@@ -2,7 +2,7 @@
 
 
 
-Cat::Cat(/* args */)
+Cat::Cat()
 {
     this->type = "Cat";
     this->brain = new Brain();
@@ -31,6 +31,15 @@ Cat& Cat::operator=(const Cat& other)
 void Cat::makeSound() const
 {
     std::cout << "🐱Miaou!🐱\n";
+}
+
+const std::string& Cat::getIdea(int index) const
+{
+    return this->brain->getIdea(index);
+}
+void Cat::setIdea(int index, const std::string& idea)
+{
+    this->brain->setIdea(index, idea);
 }
 
 Cat::~Cat()

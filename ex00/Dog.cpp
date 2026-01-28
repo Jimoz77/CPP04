@@ -3,7 +3,7 @@
 
 
 
-Dog::Dog(/* args */)
+Dog::Dog()
 {
     this->type = "Dog";
     std::cout << "🐕A doggo has been adopted\n";
@@ -11,7 +11,6 @@ Dog::Dog(/* args */)
 
 Dog::Dog(const Dog& other) : Animal(other)
 {
-    this->type = "Dog";
     std::cout << "🐕A twin doggo has been adopted\n";
 }
 

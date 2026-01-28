@@ -52,39 +52,29 @@ void test_array_of_animals()
 
 void test_deep_copy()
 {
-    std::cout << "\n========== TEST 3: Copie Profonde (Deep Copy) ==========\n";
+    std::cout << "\n========== TEST 3: Preuve Copie Profonde ==========\n";
     
-    std::cout << "\nCréation du dog original:\n";
     Dog* original = new Dog();
+    original->setIdea(0, "J'aime les os");
     
-    // Modifier quelques idées du dog original
-    // (Tu devrais ajouter un getter/setter pour tester ça proprement)
-    
-    std::cout << "\nCopie du dog (constructeur de copie):\n";
     Dog* copy = new Dog(*original);
     
-    std::cout << "\nCréation d'un 3ème dog:\n";
-    Dog* assigned = new Dog();
+    std::cout << "Original a l'idée : " << original->getIdea(0) << std::endl;
+    std::cout << "La copie a l'idée : " << copy->getIdea(0) << std::endl;
     
-    std::cout << "\nAssignation (opérateur =):\n";
-    *assigned = *original;
+    std::cout << "\n--- MODIFICATION de l'original ---" << std::endl;
+    original->setIdea(0, "J'aime dormir"); // On change l'original
     
-    std::cout << "\nVérification: 3 dogs différents existent:\n";
-    std::cout << "Original: " << original << std::endl;
-    std::cout << "Copy: " << copy << std::endl;
-    std::cout << "Assigned: " << assigned << std::endl;
+    std::cout << "Original a l'idée : " << original->getIdea(0) << std::endl;
+    std::cout << "La copie a l'idée : " << copy->getIdea(0) << std::endl;
     
-    std::cout << "\nDestruction dans l'ordre inverse:\n";
-    delete assigned;
-    std::cout << "Assigned détruit, original et copy existent toujours\n";
-    
-    delete copy;
-    std::cout << "Copy détruit, original existe toujours\n";
-    
+    if (copy->getIdea(0) == "J'aime les os")
+        std::cout << "✅ SUCCÈS : La copie a gardé son ancienne idée (Deep Copy) !\n";
+    else
+        std::cout << "❌ ÉCHEC : La copie a été modifiée (Shallow Copy) !\n";
+
     delete original;
-    std::cout << "Original détruit\n";
-    
-    std::cout << "\n✅ Si pas de crash, la copie profonde fonctionne!\n";
+    delete copy;
 }
 
 void test_cat_deep_copy()
@@ -106,7 +96,7 @@ void test_subject_example()
     const Animal* j = new Dog();
     const Animal* i = new Cat();
     
-    delete j; // Ne doit pas crash
+    delete j;
     delete i;
     
     std::cout << "\n✅ Test du sujet passé!\n";
